@@ -24,23 +24,41 @@
         <div class="layout_flex_between wrap">
             <h1 class="logo"><img src="common/images/logo.svg"/></h1>
             <div class="layout_flex_between">
-                <nav class="layout_flex_between">
-                    <div>HOME</div>
-                    <div class="menu_parent">회사소개
-                        <div id="sub_menu" class="menu_depth">
-                            <a href="javascript:void(0)">인사말</a>
-                            <a href="javascript:void(0)">업무소개</a>
-                            <a href="javascript:void(0)">오시는길</a>
+                <div class="menu_pc">
+                    <nav class="layout_flex_between">
+                        <div>HOME</div>
+                        <div class="menu_parent">회사소개
+                            <div id="sub_menu" class="menu_depth">
+                                <a href="javascript:void(0)">인사말</a>
+                                <a href="javascript:void(0)">업무소개</a>
+                                <a href="javascript:void(0)">오시는길</a>
+                            </div>
+                        </div>
+                        <div>지원서비스</div>
+                        <div>문의</div>
+                    </nav>
+                    <div class="global_btn menu_parent"><span>global</span>
+                        <div class="menu_depth">
+                            <a href="">KOR</a>
+                            <a href="">ENG</a>
                         </div>
                     </div>
-                    <div>지원서비스</div>
-                    <div>문의</div>
-                </nav>
-                <div class="global_btn menu_parent"><span>global</span>
-                    <div class="menu_depth">
-                        <a href="">KOR</a>
-                        <a href="">ENG</a>
-                    </div>
+                </div>
+                <div class="menu_mobile d-none">
+                    <a href="javacript:void(0)" class="m_menu open"></a>
+                    <nav>
+                        <a href="javascript:void(0)" class="m_menu close"></a>
+                        <div>HOME</div>
+                        <div class="">회사소개
+                            <div class="sub_menu">
+                                <a href="javascript:void(0)">인사말</a>
+                                <a href="javascript:void(0)">업무소개</a>
+                                <a href="javascript:void(0)">오시는길</a>
+                            </div>
+                        </div>
+                        <div>지원서비스</div>
+                        <div>문의</div>
+                    </nav>
                 </div>
             </div>
         </div>
@@ -57,8 +75,9 @@
                         <p>
                             <strong class="mv_title">ARK 회계 법인을 <br>찾아주셔서 감사합니다</strong><br>
                             <span class="mv_subText">ARK 회계 법인의 가장 큰 목표는 고객사와 함께 발맞춰 성장하는 것입니다. 새로운 시대를 선도하는 기업으로 성장해나가는 고객사들을 응원하며 함께 뛰는 러닝메이트가 되고자 합니다.</span>
-                        </p>
                         <a href="javasctipt:void(0)" class="btn border download">회사소개서 다운로드</a>
+                            
+                        </p>
                     </div>
                 </div>
                 <div class="swiper-slide">Slide 2</div>
@@ -84,7 +103,7 @@
         <section class="service">
             <p class="section_title">OUR SERVICE</p>
             <div class="wrap">
-                <div class="layout_flex_between">                
+                <div class="layout_flex_around">                
                     <a class="service_box financial">
                         <div class="text_area">
                             <p>
@@ -109,8 +128,6 @@
                             </p>
                         </div>
                     </a>
-                </div>
-                <div class="layout_flex_center">
                     <a class="service_box law">
                         <div class="text_area">
                             <p>
@@ -128,6 +145,9 @@
                             </p>
                         </div>
                     </a>
+                </div>
+                <div class="layout_flex_center">
+                    
                 </div>
             </div>
         </section>
@@ -210,7 +230,7 @@
     <footer>
         <div class="wrap">
             <h3 class="footer_logo"><img src="common/images/logo.svg"/></h3>
-            <div class=" d-flex justify-content-start align-item-center">
+            <div class="footer_wrap d-flex justify-content-start align-item-center">
                 <div class="address">
                     <p>
                         서울시 성동구 왕십리로 16가길 12 2층<br>

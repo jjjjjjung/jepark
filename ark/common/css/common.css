@@ -1,0 +1,361 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto&display=swap");
+body {
+  font-size: 16px;
+  font-family: "Roboto", "Noto Sans", "Noto Sans KR", sans-serif;
+  position: relative;
+}
+a {
+  text-decoration: none;
+}
+/* input 기본 스타일 초기화 */
+input,
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+}
+
+/* IE10 이상에서 input box 에 추가된 지우기 버튼 제거 */
+input::-ms-clear {
+  display: none;
+}
+
+/* input type number 에서 화살표 제거 */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+}
+.btn {
+  display: inline-block;
+  padding: 1rem;
+}
+.btn.border {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #fff;
+
+  color: #fff;
+}
+.btn.fill {
+  background: #31353d;
+  color: #fff;
+}
+.download {
+  background-image: url("../images/ico_download.svg");
+  background-position: right 1rem center;
+  background-repeat: no-repeat;
+  padding-right: 4rem !important;
+}
+.wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+  font-size: 1rem;
+}
+.layout_flex_between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.layout_flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header {
+  width: 100%;
+  background-color: transparent;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  color: #fff;
+}
+header .logo {
+  flex: 1;
+}
+
+header nav > div {
+  padding: 0 25px;
+}
+header nav > div a {
+  color: #fff;
+}
+header .global_btn {
+  margin-left: 100px;
+  width: 24px;
+  height: 24px;
+  background: url("../images/btn_global.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.container .mv {
+  position: relative;
+}
+.container .mv .swiper-slide {
+  position: relative;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+.container .mv .swiper-slide.slide01 {
+  background-image: url("../images/mv.png");
+}
+.container .mv .text_area {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 550px;
+}
+
+.container .mv p {
+  margin-bottom: 3.75rem;
+}
+.container .mv p > * {
+  display: block;
+}
+.container .mv .mv_title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.container .mv .mv_subText {
+  line-height: 1.5rem;
+}
+.container .mv .swiper-pagination {
+  width: 40px;
+  border-radius: 0;
+  height: 4px;
+  background: #00000033;
+  position: absolute;
+  bottom: 100px;
+  left: 40px;
+}
+.container .mv .swiper-pagination.active {
+  background: #fff;
+}
+.container .mv .scroll_icon {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-55%);
+  bottom: 60px;
+  background: url("../images/ico_scroll.svg") 0 0 no-repeat;
+  width: 24px;
+  height: 48px;
+  background-size: 100%;
+  z-index: 999;
+}
+
+.container .intro {
+  padding: 100px 0;
+  background: url("../images/img_intro.png") 40px bottom no-repeat;
+  background-size: 55%;
+}
+.container .intro .wrap {
+  overflow: hidden;
+}
+.container .intro .text_area {
+  width: 40%;
+  float: right;
+}
+
+.container .intro .text_area strong {
+  font-size: 2.625rem;
+  margin-bottom: 2rem;
+  display: block;
+}
+.container .intro .text_area span {
+  line-height: 2rem;
+  display: block;
+  margin-bottom: 6rem;
+}
+.container .intro .text_area a.btn.fill {
+  width: 280px !important;
+  text-align: center;
+}
+.section_title {
+  font-size: 24px;
+  text-align: center;
+}
+.container .service {
+  padding: 140px 0;
+  overflow: hidden;
+}
+.layout_flex_center .service_box {
+  margin: 0 2rem;
+}
+.container .service .service_box {
+  display: block;
+  border-radius: 1rem;
+  box-shadow: 0 5px 6px #0000002f;
+  width: 30%;
+  min-height: 300px;
+  margin-top: 4rem;
+  position: relative;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.container .service .service_box.financial {
+  background-image: url("../images/img_service01.png");
+}
+.container .service .service_box.tax {
+  background-image: url("../images/img_service02.png");
+}
+.container .service .service_box.business {
+  background-image: url("../images/img_service03.png");
+}
+.container .service .service_box.law {
+  background-image: url("../images/img_service04.png");
+}
+.container .service .service_box.money {
+  background-image: url("../images/img_service05.png");
+}
+.container .service .service_box .text_area {
+  padding: 1rem;
+  border-radius: 0 0 1rem 1rem;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100px;
+}
+.container .service .service_box p > * {
+  display: block;
+  text-align: center;
+}
+.container .service .service_box p strong {
+  margin-bottom: 1rem;
+}
+.container .service .service_box p span {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* 리뷰 */
+.container .review {
+  padding: 90px 0;
+  background-color: #f5f5f5;
+}
+.container .review .section_title {
+  margin-bottom: 3rem;
+}
+.container .review .review_box {
+  padding: 2rem 2.5rem;
+  border-radius: 1rem;
+  background: #fff;
+  width: 30%;
+  margin-right: 2rem;
+}
+.container .review .review_box .review_header {
+  font-size: 1.125rem;
+  font-weight: 500;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 1rem;
+}
+.container .review .review_box .review_header > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+.container .review .review_box .review_header img {
+  width: 60px;
+  height: 60px;
+
+  margin-right: 1rem;
+}
+
+/* 문의 */
+.container .contact {
+  background: #31353d;
+  color: #fff;
+}
+.container .contact .wrap {
+  overflow: hidden;
+}
+.container .contact .wrap > * {
+  float: left;
+  width: 50%;
+}
+.container .contact .form {
+  padding: 4rem 0;
+  width: 45%;
+  margin-right: 5%;
+}
+.container .contact .form .input_area {
+  margin-top: 3rem;
+}
+.container .contact .form .input_form > * {
+  display: block;
+}
+.container .contact .form .input_form label {
+  margin: 1rem 0;
+}
+.container .contact .form .layout_flex_between .input_form {
+  width: 50%;
+  margin-right: 1rem;
+}
+.container .contact .form .input_form input[type="text"],
+.container .contact .form .input_form textarea {
+  padding: 0.8rem 1rem;
+  width: 100%;
+}
+.container .contact .form button {
+  width: 100%;
+  background-color: #232323;
+  margin-top: 2rem;
+}
+.container .contact .map {
+  background: url("../images/map.png") 0 0 no-repeat;
+  width: 45%;
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+}
+.container .contact .map p {
+  color: #fff;
+  margin: 4rem 2rem;
+}
+
+/* footer */
+footer {
+  background: #232323;
+  color: #cccccc;
+  padding: 5.625rem 0;
+  overflow: hidden;
+}
+footer .wrap > div {
+  float: left;
+  margin-top: 2rem;
+}
+footer .footer_logo {
+  margin: 0;
+}
+footer .address {
+  line-height: 1.5rem;
+}
+footer small {
+  font-size: 1rem;
+  color: #757575;
+}
+footer .call strong {
+  color: #fff;
+}
+footer .call {
+  font-size: 1.0625rem;
+  line-height: 1.5rem;
+  font-weight: 100;
+  letter-spacing: 1px;
+  margin-left: 300px;
+}
+footer .call a {
+  color: #ccc;
+}

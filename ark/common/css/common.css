@@ -190,19 +190,31 @@ input[type="number"]::-webkit-outer-spin-button {
   border-width: 2px;
   border-style: solid;
   border-color: #fff;
+  box-sizing: border-box;
 
   color: #fff;
 }
-.btn.fill {
-  background: #31353d;
+.btn.primary {
+  background: #0950b3;
   color: #fff;
 }
 .download {
   background-image: url("../images/ico_download.svg");
-  background-position: right 1rem center;
+  background-position: right 1.5rem center;
   background-repeat: no-repeat;
-  padding-right: 4rem !important;
+  padding-right: 5rem !important;
   width: fit-content;
+  color: #fff;
+}
+.chat {
+  background-position: right 1.5rem center;
+  background-repeat: no-repeat;
+  padding-right: 5rem !important;
+  width: fit-content;
+  color: #31353d;
+  background-color: #fff;
+  background-image: url("../images/ico_btn_arrow_r.svg");
+  margin-right: 1rem;
 }
 
 /* 시작! */
@@ -235,8 +247,21 @@ header {
   z-index: 9999;
   color: #fff;
 }
+header.active {
+  background: #fff !important;
+  box-shadow: 0 5px 5px #0000005d;
+}
+
 header .logo {
   flex: 1;
+  background-image: url("../images/logo.svg");
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 230px;
+  height: 28px;
+}
+header.active .logo {
+  background-image: url("../images/logo_black.svg");
 }
 header .menu_mobile {
   display: nonne;
@@ -244,11 +269,15 @@ header .menu_mobile {
 header nav > div {
   padding: 0 25px;
 }
-header nav > div a {
+header nav > div {
   color: #797979;
 }
-header nav > div a.active {
+
+header nav > div.active {
   color: #fff;
+}
+header.active nav > div.active {
+  color: #212121 !important;
 }
 header .menu_parent {
   position: relative;
@@ -268,12 +297,14 @@ header .menu_depth {
 }
 header .menu_depth::before {
   content: "";
-  background: url("") center no-repeat;
+  background-image: url("../images/tooltip_tail.svg");
+  background-position: center top;
+  background-repeat: no-repeat;
   width: 20px;
   height: 20px;
   display: block;
   position: absolute;
-  top: -20px;
+  top: -15px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -287,12 +318,15 @@ header .global_btn {
   margin-left: 50px;
   width: 24px;
   height: 24px;
-  background: url("../images/btn_global.svg");
+  background-image: url("../images/btn_global.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
   display: block;
   cursor: pointer;
+}
+header.active .global_btn {
+  background-image: url("../images/btn_global_active.svg");
 }
 header .global_btn span {
   display: block;
@@ -359,16 +393,18 @@ header .global_btn span {
   background-size: 100%;
   z-index: 999;
 }
-
+.container .intro {
+  background-color: #dfe9f5;
+}
 .container .intro .wrap {
   overflow: hidden;
-  padding-top: 150px;
-  margin: 100px 0 50px;
-  background: url("../images/img_intro.png") 40px bottom no-repeat;
+  padding: 150px 40px 100px;
+  background: url("../images/img_intro.png") 0 bottom no-repeat;
   background-size: 55%;
+  color: #243f66;
 }
 .container .intro .text_area {
-  width: 40%;
+  width: 45%;
   float: right;
 }
 
@@ -404,16 +440,18 @@ header .global_btn span {
   border-radius: 1rem;
   box-shadow: 0 5px 6px #0000002f;
   width: 30%;
-  min-height: 300px;
+  min-height: 280px;
   margin-top: 4rem;
   position: relative;
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: 100%;
 }
+
 .container .service .service_box.financial {
   background-image: url("../images/img_service01.png");
 }
+
 .container .service .service_box.tax {
   background-image: url("../images/img_service02.png");
 }
@@ -440,8 +478,7 @@ header .global_btn span {
   justify-content: space-around;
   flex-direction: column;
 }
-.container .service .service_box p {
-}
+
 .container .service .service_box p > * {
   display: block;
   text-align: center;
@@ -452,6 +489,58 @@ header .global_btn span {
 .container .service .service_box p span {
   width: 100%;
   margin: 0 auto;
+}
+
+.container .service .service_box:hover::before {
+  content: "";
+  display: block;
+  background-color: #0950b3;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 555;
+  border-radius: 1rem;
+}
+.container .service .service_box:hover::after {
+  border-radius: 100%;
+  width: 140px;
+  height: 140px;
+  background-color: #fff;
+  position: absolute;
+  display: block;
+  content: "";
+  z-index: 556;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 1rem;
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.container .service .service_box.financial:hover::after {
+  background-image: url("../images/ico_service01.png");
+}
+
+.container .service .service_box.tax:hover::after {
+  background-image: url("../images/ico_service02.png");
+}
+.container .service .service_box.business:hover::after {
+  background-image: url("../images/ico_service03.png");
+}
+.container .service .service_box.law:hover::after {
+  background-image: url("../images/ico_service04.png");
+}
+.container .service .service_box.money:hover::after {
+  background-image: url("../images/ico_service05.png");
+}
+.container .service .service_box:hover .text_area {
+  background-color: transparent;
+  z-index: 557;
+}
+.container .service .service_box:hover .text_area p > * {
+  color: #fff !important;
 }
 
 /* 리뷰 */
@@ -504,44 +593,42 @@ header .global_btn span {
 }
 .container .contact .wrap > * {
   width: 50%;
+  height: 400px;
 }
 .container .contact .form {
   padding: 4rem 0;
   width: 45%;
   margin-right: 5%;
 }
-.container .contact .form .input_area {
-  margin-top: 3rem;
+.container .contact .form .contact_area {
+  margin-top: 10rem;
 }
-.container .contact .form .input_form > * {
+.container .contact .contact_area > strong {
+  font-size: 1.128rem;
+  margin-bottom: 1rem;
   display: block;
 }
-.container .contact .form .input_form label {
-  margin: 1rem 0;
+.container .contact .contact_area > p {
+  color: #cccccc;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
 }
-.container .contact .form .layout_flex_between .input_form {
-  width: 50%;
-  margin-right: 1rem;
-}
-.container .contact .form .layout_flex_between .input_form:last-child{
-  margin-right:0;
-}
-.container .contact .form .input_form input[type="text"],
-.container .contact .form .input_form textarea {
-  padding: 0.8rem 1rem;
-  width: calc(100% - 2rem);
-}
-.container .contact .form button {
-  width: 100%;
-  background-color: #232323;
-  margin-top: 2rem;
+.container .contact .btn_area {
+  margin-top: 3rem;
 }
 .container .contact .map {
-  background: url("../images/map.png") 0 0 no-repeat;
   width: 45%;
-  height: 100vh;
-  background-size: cover;
   position: relative;
+}
+.container .contact .map::before {
+  content: "찾아오시는 길";
+  position: absolute;
+  width: calc(100% - 4rem);
+  height: 100%;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 4rem 2rem;
+  z-index: 999;
 }
 .container .contact .map p {
   color: #fff;
@@ -582,6 +669,184 @@ footer .call a {
   color: #ccc;
 }
 
+/*swiper*/
+
+.swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+.parallax-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper-slide .title {
+  font-size: 41px;
+  font-weight: 300;
+}
+
+.swiper-slide .subtitle {
+  font-size: 21px;
+}
+
+.swiper-slide .text {
+  font-size: 14px;
+  max-width: 400px;
+  line-height: 1.3;
+}
+.sub section + section {
+  margin-top: 100px;
+}
+.sub .title {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.sub .sub_title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
+  width: 70%;
+  word-wrap: break-word;
+}
+.message {
+  padding: 13rem 0 5rem;
+  background: url("../images/img_msg.png") center no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+.message .wrap > * {
+  width: 60%;
+  line-height: 1.6;
+}
+.message .slogun {
+  font-size: 1.2rem;
+  margin-top: 2.5rem;
+  font-weight: 400;
+}
+
+.partner .profile_area {
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+.partner .profile {
+  width: 240px;
+  text-align: center;
+  padding: 3rem;
+  padding-top: 0;
+}
+.partner .profile > img {
+  width: 100%;
+}
+.partner .profile_txt {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 1.3rem;
+}
+.partner .name {
+  margin-right: 1.5rem;
+  text-align: left;
+}
+.partner .name > * {
+  display: block;
+}
+.partner .name span {
+  font-size: 1.128rem;
+}
+.partner .name strong {
+  color: #0950b3;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.business .process {
+}
+.business .process .proc_infogram {
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  border-radius: 500px;
+  width: calc(400px - 5rem);
+  height: calc(400px - 5rem);
+  padding: 5rem;
+  text-align: center;
+  position: relative;
+}
+.business .process .proc_infogram::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  background: #ddd;
+  height: 200px;
+}
+.business .process .proc_infogram::after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15px;
+  height: 15px;
+  background: #ddd;
+  border-radius: 50px;
+  bottom: -65%;
+}
+.business .process .proc_infogram img {
+  width: 60%;
+}
+.business .process .proc_infogram strong {
+  display: block;
+  margin-top: 2rem;
+}
+.business .process .proc_title {
+  font-size: 1.128rem;
+  margin: 1.5rem 0;
+}
+.business .process .proc_cont {
+  margin-top: 200px;
+}
+.business .process .proc_cont > img {
+  width: 80px;
+}
+.business .process .proc_cont li {
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 1.3rem;
+}
+.business .process .proc_cont li::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: #0950b3;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
 @media (max-width: 1024px) {
   header .menu_pc {
     display: none;
@@ -641,6 +906,19 @@ footer .call a {
   .scroll_icon {
     display: none;
   }
+  header .menu_mobile nav {
+    width: 60%;
+  }
+  header .menu_mobile nav::after {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    z-index: -2;
+    left: -100%;
+    top: 0;
+  }
   .container .intro .wrap {
     background: none;
   }
@@ -648,7 +926,6 @@ footer .call a {
     width: 100%;
   }
 
-  
   .container .service .service_box {
     width: calc(100% / 2.5);
     margin-left: 1rem;
@@ -676,7 +953,11 @@ footer .call a {
     margin-bottom: 3rem;
   }
 }
-@media (min-width: 360px) and (max-width:767px) {
+@media (min-width: 360px) and (max-width: 767px) {
+  header .menu_mobile nav {
+    width: calc(100% - 4rem);
+    padding: 2rem;
+  }
   .wrap {
     font-size: 0.875rem !important;
   }
@@ -696,7 +977,6 @@ footer .call a {
     line-height: 1.5;
     margin-bottom: 1rem;
   }
-
 
   .container .intro .text_area .btn {
     padding: 1rem 0;

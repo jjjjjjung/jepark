@@ -593,7 +593,7 @@ header .global_btn span {
 }
 .container .contact .wrap > * {
   width: 50%;
-  height: 400px;
+  min-height: 400px;
 }
 .container .contact .form {
   padding: 4rem 0;
@@ -713,6 +713,9 @@ footer .call a {
   max-width: 400px;
   line-height: 1.3;
 }
+.sub section:first-child {
+  padding-top: 200px;
+}
 .sub section + section {
   margin-top: 100px;
 }
@@ -778,7 +781,9 @@ footer .call a {
   font-size: 1.5rem;
   font-weight: 500;
 }
-
+.business .process {
+  margin-top: 100px;
+}
 .business .process .proc_infogram {
   border: 1px solid #ddd;
   box-sizing: border-box;
@@ -789,6 +794,7 @@ footer .call a {
   text-align: center;
   position: relative;
 }
+
 .business .process .proc_infogram::before {
   content: "";
   position: absolute;
@@ -810,7 +816,19 @@ footer .call a {
   height: 15px;
   background: #ddd;
   border-radius: 50px;
-  bottom: -65%;
+  bottom: -200px;
+}
+.business .process .process02 .proc_infogram::before {
+  height: 400px;
+}
+.business .process .process02 .proc_infogram::after {
+  bottom: -400px;
+}
+.business .process .process03 .proc_infogram::before {
+  height: 600px;
+}
+.business .process .process03 .proc_infogram::after {
+  bottom: -600px;
 }
 .business .process .proc_infogram img {
   width: 60%;
@@ -822,19 +840,26 @@ footer .call a {
 .business .process .proc_title {
   font-size: 1.128rem;
   margin: 1.5rem 0;
+  font-weight: 500;
 }
 .business .process .proc_cont {
   margin-top: 200px;
 }
+.business .process .process02 .proc_cont {
+  margin-top: 400px;
+}
+.business .process .process03 .proc_cont {
+  margin-top: 600px;
+}
 .business .process .proc_cont > img {
   width: 80px;
 }
-.business .process .proc_cont li {
+.list_style_square li {
   position: relative;
   padding-left: 1rem;
   margin-bottom: 1.3rem;
 }
-.business .process .proc_cont li::before {
+.list_style_square li::before {
   content: "";
   position: absolute;
   display: block;
@@ -844,6 +869,88 @@ footer .call a {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+}
+.business .process .proc_cont .list_cate > strong {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  padding: 0 0.2rem;
+  margin-bottom: 1.3rem;
+}
+.business .process .proc_cont .list_cate > strong::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #5291ea;
+  display: block;
+  z-index: -1;
+  padding: 0 0.2rem;
+  left: -0.2rem;
+}
+.sub.contact {
+  overflow: hidden;
+}
+.sub.contact h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.container .contact.sub .wrap {
+  display: block;
+}
+.container .contact.sub .map {
+  width: 100%;
+}
+
+/*package*/
+.package {
+}
+.package .package_list {
+  margin-top: 100px;
+}
+.package .package_list .package_box {
+  box-shadow: 0 5px 5px #0000005d;
+  margin: 0 1rem;
+  border-radius: 1rem;
+  min-width: 240px;
+}
+.package .package_box .pkg_title {
+  text-align: center;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 1rem 1rem 0 0;
+  background: #5291ea;
+  padding: 1.5rem;
+}
+.package .package_box .pkg_body {
+  padding: 3rem 1.5rem;
+  border-radius: 0 0 1rem 1rem;
+}
+.package .package_box .pkg_body > img {
+  width: 90px;
+  display: block;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.package .package_box .pkg_body .pkg_sub_ttl {
+  position: relative;
+  display: block;
+  padding: 0.2rem;
+  color: #fff;
+}
+.package .package_box .pkg_body .pkg_sub_ttl::before {
+  background: #000;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: -1;
+  left: -0.2rem;
+  top: 0.1rem;
+  padding-left: 0.2rem;
 }
 @media (max-width: 1024px) {
   header .menu_pc {

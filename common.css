@@ -264,7 +264,7 @@ header.active .logo {
   background-image: url("../images/logo_black.svg");
 }
 header .menu_mobile {
-  display: none;
+  display: nonne;
 }
 header nav > div {
   padding: 0 25px;
@@ -615,14 +615,12 @@ header .global_btn span {
 }
 .container .contact .btn_area {
   margin-top: 3rem;
-  display: flex;
-  justify-content: start;
 }
 .container .contact .map {
   width: 45%;
   position: relative;
 }
-.container .contact .map::after {
+.container .contact .map::before {
   content: "찾아오시는 길";
   position: absolute;
   width: calc(100% - 4rem);
@@ -898,16 +896,15 @@ footer .call a {
   font-weight: 500;
   margin-bottom: 1rem;
 }
-.container.sub .contact .wrap {
+.container .contact.sub .wrap {
   display: block;
 }
-.container.sub .contact .map {
+.container .contact.sub .map {
   width: 100%;
 }
 
 /*package*/
 .package {
-  margin-bottom: 200px;
 }
 .package .package_list {
   margin-top: 100px;
@@ -916,13 +913,7 @@ footer .call a {
   box-shadow: 0 5px 5px #0000005d;
   margin: 0 1rem;
   border-radius: 1rem;
-  width: 100%;
-}
-.package .package_list .package_box:first-child {
-  margin-left: 0;
-}
-.package .package_list .package_box:last-child {
-  margin-right: 0;
+  min-width: 240px;
 }
 .package .package_box .pkg_title {
   text-align: center;
@@ -936,26 +927,21 @@ footer .call a {
 .package .package_box .pkg_body {
   padding: 3rem 1.5rem;
   border-radius: 0 0 1rem 1rem;
-  text-align: center;
 }
 .package .package_box .pkg_body > img {
-  width: 40%;
+  width: 90px;
+  display: block;
   text-align: center;
   margin-bottom: 1.5rem;
-}
-.package .package_box:first-child .pkg_body > img {
-  width: 30%;
 }
 .package .package_box .pkg_body .pkg_sub_ttl {
   position: relative;
   display: block;
   padding: 0.2rem;
   color: #fff;
-  text-align: center;
-  margin-bottom: 1.5rem;
 }
-
 .package .package_box .pkg_body .pkg_sub_ttl::before {
+  background: #000;
   content: "";
   position: absolute;
   width: 100%;
@@ -963,24 +949,8 @@ footer .call a {
   display: block;
   z-index: -1;
   left: -0.2rem;
-  top: 0;
+  top: 0.1rem;
   padding-left: 0.2rem;
-}
-.package .package_box.packageB .pkg_title,
-.package .package_box.packageB .pkg_body .pkg_sub_ttl::before {
-  background: #0b66e6;
-}
-.package .package_box.packageC .pkg_title,
-.package .package_box.packageC .pkg_body .pkg_sub_ttl::before {
-  background: #0950b3;
-}
-.package .package_box.packageD .pkg_title,
-.package .package_box.packageD .pkg_body .pkg_sub_ttl::before {
-  background: #052d66;
-}
-
-.package .package_list .package_box li {
-  text-align: left;
 }
 @media (max-width: 1024px) {
   header .menu_pc {
@@ -1023,13 +993,11 @@ footer .call a {
   header .menu_mobile nav .sub_menu > a {
     display: block;
     margin: 1rem;
-    color: #797979;
   }
-  header .menu_mobile nav .sub_menu > a.active {
-    color: #212121;
-  }
+
   .container .intro .wrap {
     padding-top: 80px;
+    margin: 50px 0;
   }
   .container .intro .text_area strong {
     font-size: 2rem;
@@ -1037,57 +1005,6 @@ footer .call a {
   }
   footer .call {
     margin-left: 3rem;
-  }
-  .message .wrap > * {
-    width: 100%;
-  }
-  .sub .title {
-    font-size: 2.5rem;
-  }
-  .partner .profile_area {
-    margin-top: 50px;
-  }
-  .partner .profile {
-    width: 25%;
-    padding: 0;
-    margin: 3%;
-  }
-  .business .process .proc_infogram {
-    margin-top: 3rem;
-  }
-  .business .process .process02 .proc_infogram::before,
-  .business .process .process03 .proc_infogram::before {
-    height: 200px;
-  }
-  .business .process .process02 .proc_infogram::after,
-  .business .process .process03 .proc_infogram::after {
-    bottom: -200px;
-  }
-  .business .process .process02 .proc_cont,
-  .business .process .process03 .proc_cont {
-    margin-top: 200px;
-  }
-  .package_list {
-    flex-wrap: wrap;
-  }
-  .package .package_list .package_box {
-    width: calc(50% - 2rem);
-    margin: 0;
-    margin-bottom: 3rem;
-  }
-  .business .process {
-    flex-wrap: wrap;
-    justify-content: space-between !important;
-  }
-  .container .contact .btn_area {
-    flex-wrap: wrap;
-  }
-  .container .contact .btn_area > a {
-    width: 100%;
-  }
-  .container .contact .btn_area > a.chat {
-    margin-right: 0;
-    margin-bottom: 2rem;
   }
 }
 @media (max-width: 768px) {
@@ -1179,22 +1096,6 @@ footer .call a {
     flex-wrap: nowrap;
   }
   .container .review .review_box {
-    width: 100%;
-  }
-  .message .wrap > * {
-    width: 100%;
-  }
-  .sub .title {
-    font-size: 2.5rem;
-  }
-  .sub .sub_title {
-    font-size: 1.3rem;
-  }
-
-  .package .package_list .package_box {
-    width: 100%;
-  }
-  .container.sub .contact .btn_area > a {
     width: 100%;
   }
 }

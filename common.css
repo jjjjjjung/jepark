@@ -355,12 +355,6 @@ header .global_btn span {
   width: 550px;
 }
 
-.container .mv p {
-  margin-bottom: 3.75rem;
-}
-.container .mv p > * {
-  display: block;
-}
 .container .mv .mv_title {
   font-size: 3rem;
   margin-bottom: 2rem;
@@ -370,7 +364,7 @@ header .global_btn span {
   margin-bottom: 3rem;
 }
 
-.container .mv .swiper-pagination {
+.container .mv .swiper-pagination .swiper-pagination-bullet {
   width: 40px;
   border-radius: 0;
   height: 4px;
@@ -379,7 +373,7 @@ header .global_btn span {
   bottom: 100px;
   left: 40px;
 }
-.container .mv .swiper-pagination.active {
+.container .mv .swiper-pagination .swiper-pagination-bullet.active {
   background: #fff;
 }
 .container .mv .scroll_icon {
@@ -713,6 +707,28 @@ footer .call a {
   max-width: 400px;
   line-height: 1.3;
 }
+.slide2 {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  color: black;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+
 .sub section:first-child {
   padding-top: 200px;
 }

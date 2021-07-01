@@ -15,77 +15,6 @@
 
     <!-- swiper css -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <style>
-        .swiper-container {
-            width: 100%;
-            height: 100%;
-        }
-
-        .swiper-slide {
-            font-size: 18px;
-            color: #fff;
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-            padding: 40px 60px;
-        }
-
-        .parallax-bg {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 130%;
-            height: 100%;
-            -webkit-background-size: cover;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .swiper-slide .title {
-            font-size: 41px;
-            font-weight: 300;
-        }
-
-        .swiper-slide .subtitle {
-            font-size: 21px;
-        }
-
-        .swiper-slide .text {
-            font-size: 14px;
-            max-width: 400px;
-            line-height: 1.3;
-        }
-
-        .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-    </style>
-
-    <style>
-        .slide2 {
-            text-align: center;
-            font-size: 18px;
-            background: #fff;
-            color: black;
-    
-            /* Center slide text vertically */
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            -webkit-justify-content: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            -webkit-align-items: center;
-            align-items: center;
-        }
-    </style>
 
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -183,46 +112,42 @@
         <section class="mv">
             <!-- Swiper -->
             <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper-container mySwiper">
-                <div class="parallax-bg" style="background-image: url(../ark/common/images/mv.png);"
-                  data-swiper-parallax="-23%"
-                ></div>
+                <!-- 메인 비주얼 이미지 하나만 사용 -->
+                <div class="parallax-bg" style="background-image: url(../ark/common/images/mv.png);" data-swiper-parallax="-23%"></div>
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <div class="title" data-swiper-parallax="-300">
-                        <strong class="mv_title">ARK 회계 법인을 <br>찾아주셔서 감사합니다</strong><br>
-                    </div>
-                    <div class="subtitle" data-swiper-parallax="-200">
-                        <span class="mv_subText">ARK 회계 법인의 가장 큰 목표는 고객사와 함께 발맞춰 성장하는 것입니다. 새로운 시대를 선도하는 기업으로 성장해나가는 고객사들을 응원하며 함께 뛰는 러닝메이트가 되고자 합니다.</span>
-                    </div>
-                    <div class="text" data-swiper-parallax="-100">
-                      <p>
-                        <a href="javasctipt:void(0)" class="btn border download">회사소개서 다운로드</a>
-                      </p>
+                      <div class="text_area wrap">
+                        <div class="title mv_title" data-swiper-parallax="-300">
+                            <strong>ARK 회계 법인을 <br>찾아주셔서 감사합니다</strong><br>
+                        </div>
+                        <div class="subtitle mv_subText" data-swiper-parallax="-200">
+                            <span>ARK 회계 법인의 가장 큰 목표는 고객사와 함께 발맞춰 성장하는 것입니다. 새로운 시대를 선도하는 기업으로 성장해나가는 고객사들을 응원하며 함께 뛰는 러닝메이트가 되고자 합니다.</span>
+                        </div>
+                        <div class="text" data-swiper-parallax="-100">
+                            <a href="javasctipt:void(0)" class="btn border download">회사소개서 다운로드</a>
+                        </div>
                     </div>
                   </div>
+
                   <div class="swiper-slide">
-                    <div class="title" data-swiper-parallax="-300">Slide 2</div>
-                    <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
-                    <div class="text" data-swiper-parallax="-100">
-                      <p>
-                          test2
-                      </p>
+                    <div class="text_area wrap">
+                        <div class="title" data-swiper-parallax="-300">Slide 2</div>
+                        <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+                        <div class="text" data-swiper-parallax="-100">test2</div>
                     </div>
                   </div>
+
                   <div class="swiper-slide">
-                    <div class="title" data-swiper-parallax="-300">Slide 3</div>
-                    <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
-                    <div class="text" data-swiper-parallax="-100">
-                      <p>
-                        test3
-                      </p>
+                    <div class="text_area wrap">
+                        <div class="title" data-swiper-parallax="-300">Slide 3</div>
+                        <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+                        <div class="text" data-swiper-parallax="-100">test3</div>
                     </div>
                   </div>
+                  
                 </div>
-                <!-- <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div> -->
                 <div class="swiper-pagination"></div>
-              </div>
+            </div>
 
             <!-- 슬라이더 생성 -->
             <script>
@@ -279,6 +204,8 @@
                             </p>
                         </div>
                     </a>
+                </div>
+                <div class="layout_flex_center">
                     <a class="service_box law">
                         <div class="text_area">
                             <p>
@@ -303,126 +230,82 @@
             </div>
         </section>
 
-
-        <section class="review" style="display: none;">
-            <p class="section_title">REVIEW</p>
-            <!-- Slider main container -->
-            <div class="swiper-container">
-                <!-- Additional required wrapper -->
-                <div class="wrap">
-                    <div class="swiper-wrapper layout_flex_between">
-                        <!-- Slides -->
-                        <div class="swiper-slide review_box">
-                            <div class="review_header">
-                                <img src="common/images/ico_review.svg">
-                                <p>의류브랜드 J사</p>
-                            </div>
-                            <div class="review_cont">
-                                기장과 세무조정만 해주던 세무사무소는 직접 신경써야 하는것이 많았는데, 아크 회계 법인은 그때 그때 회사에 필요한 모든 업무를 대신 해주셔서 너무 편했습니다
-                            </div>
+        <!-- PC 하단슬라이더 -->
+        <section class="review swiperPC">
+            <div class="swiper-container mySwiper3 ">
+                <div class="swiper-wrapper wrap">
+        
+                    <!-- 슬라이더추가 -->
+                    <div class="swiper-slide review_box">
+                        <div class="review_header">
+                            <img src="common/images/ico_review.svg">
+                            <p>의류브랜드 J사</p>
                         </div>
-                        <div class="swiper-slide review_box">
-                            <div class="review_header">
-                                <img src="common/images/ico_review.svg">
-                                <p>의류브랜드 J사</p>
-                            </div>
-                            <div class="review_cont">
-                                기장과 세무조정만 해주던 세무사무소는 직접 신경써야 하는것이 많았는데, 아크 회계 법인은 그때 그때 회사에 필요한 모든 업무를 대신 해주셔서 너무 편했습니다
-                            </div>
-                        </div>
-                        <div class="swiper-slide review_box">
-                            <div class="review_header">
-                                <img src="common/images/ico_review.svg">
-                                <p>의류브랜드 J사</p>
-                            </div>
-                            <div class="review_cont">
-                                기장과 세무조정만 해주던 세무사무소는 직접 신경써야 하는것이 많았는데, 아크 회계 법인은 그때 그때 회사에 필요한 모든 업무를 대신 해주셔서 너무 편했습니다
-                            </div>
+                        <div class="review_cont">
+                            기장과 세무조정만 해주던 세무사무소는 직접 신경써야 하는것이 많았는데, 아크 회계 법인은 그때 그때 회사에 필요한 모든 업무를 대신 해주셔서 너무 편했습니다
                         </div>
                     </div>
-                </div>
 
+                    <!-- 슬라이더추가 -->
+                    <div class="swiper-slide review_box">
+                        <div class="review_header">
+                            <img src="common/images/ico_review.svg">
+                            <p>의류브랜드 J사</p>
+                        </div>
+                        <div class="review_cont">
+                            기장과 세무조정만 해주던 세무사무소는 직접 신경써야 하는것이 많았는데, 아크 회계 법인은 그때 그때 회사에 필요한 모든 업무를 대신 해주셔서 너무 편했습니다
+                        </div>
+                    </div>
+
+                    <!-- 슬라이더추가 -->
+                    <div class="swiper-slide review_box">
+                        <div class="review_header">
+                            <img src="common/images/ico_review.svg">
+                            <p>의류브랜드 J사</p>
+                        </div>
+                        <div class="review_cont">
+                            기장과 세무조정만 해주던 세무사무소는 직접 신경써야 하는것이 많았는데, 아크 회계 법인은 그때 그때 회사에 필요한 모든 업무를 대신 해주셔서 너무 편했습니다
+                        </div>
+                    </div>
+
+                    <!-- 슬라이더추가 -->
+                    <div class="swiper-slide review_box">
+                        <div class="review_header">
+                            <img src="common/images/ico_review.svg">
+                            <p>의류브랜드 J사</p>
+                        </div>
+                        <div class="review_cont">
+                            기장과 세무조정만 해주던 세무사무소는 직접 신경써야 하는것이 많았는데, 아크 회계 법인은 그때 그때 회사에 필요한 모든 업무를 대신 해주셔서 너무 편했습니다
+                        </div>
+                    </div>
+
+                    <!-- 슬라이더추가 -->
+                    <div class="swiper-slide review_box">
+                        <div class="review_header">
+                            <img src="common/images/ico_review.svg">
+                            <p>의류브랜드 J사</p>
+                        </div>
+                        <div class="review_cont">
+                            기장과 세무조정만 해주던 세무사무소는 직접 신경써야 하는것이 많았는데, 아크 회계 법인은 그때 그때 회사에 필요한 모든 업무를 대신 해주셔서 너무 편했습니다
+                        </div>
+                    </div>
+
+                    <!-- 슬라이더추가 -->
+                    <div class="swiper-slide review_box">
+                        <div class="review_header">
+                            <img src="common/images/ico_review.svg">
+                            <p>의류브랜드 J사</p>
+                        </div>
+                        <div class="review_cont">
+                            기장과 세무조정만 해주던 세무사무소는 직접 신경써야 하는것이 많았는데, 아크 회계 법인은 그때 그때 회사에 필요한 모든 업무를 대신 해주셔서 너무 편했습니다
+                        </div>
+                    </div>
+        
+        
+                </div>
                 <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
-
-            </div>
-        </section>
-
-        <!-- PC 하단슬라이더 -->
-        <section class="review swiperPC">
-            <div class="swiper-container mySwiper3">
-                <div class="swiper-wrapper">
-        
-                    <!-- 슬라이더추가 -->
-                    <div class="swiper-slide slide2">
-                        <div class="review_header">
-                            <img src="common/images/ico_review.svg">
-                            <p>의류브랜드 J사</p>
-                        </div>
-                        <div class="review_cont">
-                            기장과 세무조정만 해주던 세무사무소는 직접 신경써야 하는것이 많았는데, 아크 회계 법인은 그때 그때 회사에 필요한 모든 업무를 대신 해주셔서 너무 편했습니다
-                        </div>
-                    </div>
-
-                    <!-- 슬라이더추가 -->
-                    <div class="swiper-slide slide2">
-                        <div class="review_header">
-                            <img src="common/images/ico_review.svg">
-                            <p>의류브랜드 J사</p>
-                        </div>
-                        <div class="review_cont">
-                            기장과 세무조정만 해주던 세무사무소는 직접 신경써야 하는것이 많았는데, 아크 회계 법인은 그때 그때 회사에 필요한 모든 업무를 대신 해주셔서 너무 편했습니다
-                        </div>
-                    </div>
-
-                    <!-- 슬라이더추가 -->
-                    <div class="swiper-slide slide2">
-                        <div class="review_header">
-                            <img src="common/images/ico_review.svg">
-                            <p>의류브랜드 J사</p>
-                        </div>
-                        <div class="review_cont">
-                            기장과 세무조정만 해주던 세무사무소는 직접 신경써야 하는것이 많았는데, 아크 회계 법인은 그때 그때 회사에 필요한 모든 업무를 대신 해주셔서 너무 편했습니다
-                        </div>
-                    </div>
-
-                    <!-- 슬라이더추가 -->
-                    <div class="swiper-slide slide2">
-                        <div class="review_header">
-                            <img src="common/images/ico_review.svg">
-                            <p>의류브랜드 J사</p>
-                        </div>
-                        <div class="review_cont">
-                            기장과 세무조정만 해주던 세무사무소는 직접 신경써야 하는것이 많았는데, 아크 회계 법인은 그때 그때 회사에 필요한 모든 업무를 대신 해주셔서 너무 편했습니다
-                        </div>
-                    </div>
-
-                    <!-- 슬라이더추가 -->
-                    <div class="swiper-slide slide2">
-                        <div class="review_header">
-                            <img src="common/images/ico_review.svg">
-                            <p>의류브랜드 J사</p>
-                        </div>
-                        <div class="review_cont">
-                            기장과 세무조정만 해주던 세무사무소는 직접 신경써야 하는것이 많았는데, 아크 회계 법인은 그때 그때 회사에 필요한 모든 업무를 대신 해주셔서 너무 편했습니다
-                        </div>
-                    </div>
-
-                    <!-- 슬라이더추가 -->
-                    <div class="swiper-slide slide2">
-                        <div class="review_header">
-                            <img src="common/images/ico_review.svg">
-                            <p>의류브랜드 J사</p>
-                        </div>
-                        <div class="review_cont">
-                            기장과 세무조정만 해주던 세무사무소는 직접 신경써야 하는것이 많았는데, 아크 회계 법인은 그때 그때 회사에 필요한 모든 업무를 대신 해주셔서 너무 편했습니다
-                        </div>
-                    </div>
-        
-        
-                </div>
-                <div class="swiper-pagination"></div>
             </div>
         </section>
 
@@ -432,7 +315,7 @@
                 <div class="swiper-wrapper">
         
                     <!-- 슬라이더추가 -->
-                    <div class="swiper-slide slide2">
+                    <div class="swiper-slide review_box">
                         <div class="review_header">
                             <img src="common/images/ico_review.svg">
                             <p>의류브랜드 J사</p>
@@ -443,7 +326,7 @@
                     </div>
 
                     <!-- 슬라이더추가 -->
-                    <div class="swiper-slide slide2">
+                    <div class="swiper-slide review_box">
                         <div class="review_header">
                             <img src="common/images/ico_review.svg">
                             <p>의류브랜드 J사</p>
@@ -454,7 +337,7 @@
                     </div>
 
                     <!-- 슬라이더추가 -->
-                    <div class="swiper-slide slide2">
+                    <div class="swiper-slide review_box">
                         <div class="review_header">
                             <img src="common/images/ico_review.svg">
                             <p>의류브랜드 J사</p>
@@ -465,7 +348,7 @@
                     </div>
 
                     <!-- 슬라이더추가 -->
-                    <div class="swiper-slide slide2">
+                    <div class="swiper-slide review_box">
                         <div class="review_header">
                             <img src="common/images/ico_review.svg">
                             <p>의류브랜드 J사</p>
@@ -476,7 +359,7 @@
                     </div>
 
                     <!-- 슬라이더추가 -->
-                    <div class="swiper-slide slide2">
+                    <div class="swiper-slide review_box">
                         <div class="review_header">
                             <img src="common/images/ico_review.svg">
                             <p>의류브랜드 J사</p>
@@ -487,7 +370,7 @@
                     </div>
 
                     <!-- 슬라이더추가 -->
-                    <div class="swiper-slide slide2">
+                    <div class="swiper-slide review_box">
                         <div class="review_header">
                             <img src="common/images/ico_review.svg">
                             <p>의류브랜드 J사</p>
@@ -499,7 +382,6 @@
         
         
                 </div>
-                <div class="swiper-pagination"></div>
             </div>
         </section>
 

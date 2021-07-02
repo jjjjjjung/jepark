@@ -1051,6 +1051,7 @@ footer .call a {
   .swiperPC{
     display: none;;
   }
+ 
   .container .contact .wrap {
     flex-wrap: wrap;
     flex-direction: column;

@@ -544,8 +544,10 @@ header .global_btn span {
   display: none;
 }
 .container .review {
-  padding: 90px 0;
   background-color: #f5f5f5;
+}
+.container .review .swiper-wrapper{
+  padding:80px 40px
 }
 .container .review .section_title {
   margin-bottom: 3rem;
@@ -555,6 +557,7 @@ header .global_btn span {
   background: #fff;
   width: 30%;
   margin-right: 2rem;
+  box-shadow: 0 5px 5px #0000000d;
 }
 .container .review .review_box .review_header {
   font-size: 1.125rem;
@@ -1019,20 +1022,35 @@ footer .call a {
   header .menu_mobile {
     display: block;
   }
-
+  header .menu_mobile nav::after {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 250%;
+    height: 100vh;
+    z-index: -2;
+    left: -250%;
+    top: 0;
+  }
   header .menu_mobile .m_menu {
-    display: block;
+    display: inline-block;
     width: 24px;
     height: 24px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
+    vertical-align: middle;
   }
+
   header .menu_mobile .m_menu.open {
     background-image: url("../images/btn_menu.svg");
   }
+  header.active .menu_mobile .m_menu{
+    background-image: url("../images/btn_menu_active.svg");
+
+  }
   header .menu_mobile .m_menu.close {
-    background-image: url("../images/btn_global.svg");
+    background-image: url("../images/btn_close.svg");
   }
   header .menu_mobile nav {
     position: fixed;
@@ -1041,18 +1059,22 @@ footer .call a {
     height: 100vh;
     width: 30%;
     background: #fff;
-    padding: 2rem;
+    padding: 1rem;
     text-align: left;
     color: #212121;
     font-size: 1.162rem;
     z-index: 9999;
+    text-align: right;
   }
 
   header .menu_mobile nav > div {
-    margin: 1rem;
+    margin: 1rem 0;
+    text-align: left;
+    padding:0;
+    padding-left:20px
   }
   header .menu_mobile nav .sub_menu > a {
-    display: block;
+    display: inline-block;
     margin: 1rem;
     color: #797979;
   }
@@ -1061,7 +1083,7 @@ footer .call a {
   }
   header .menu_mobile .global_m {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 70px;
   }
   header .menu_mobile .global_m > a {
     display: inline-block;
@@ -1156,16 +1178,7 @@ footer .call a {
   header .menu_mobile nav {
     width: 60%;
   }
-  header .menu_mobile nav::after {
-    content: "";
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: 100vh;
-    z-index: -2;
-    left: -100%;
-    top: 0;
-  }
+  
   .container .intro .wrap {
     background: none;
   }
@@ -1214,12 +1227,17 @@ footer .call a {
   }
 }
 @media (min-width: 360px) and (max-width: 767px) {
+  
+  header .logo{
+    background-size: 60%;
+  }
   header .menu_mobile nav {
     width: calc(100% - 4rem);
     padding: 2rem;
   }
   .wrap {
     font-size: 0.875rem !important;
+    padding:0 20px;
   }
   .container .mv .text_area {
     position: unset !important;
@@ -1248,10 +1266,12 @@ footer .call a {
   }
   .container .review .swiper-wrapper {
     flex-wrap: nowrap;
+    
   }
   .container .review .review_box {
-    width: 100%;
+    width: 80% !important;
   }
+ 
   .message .wrap > * {
     width: 100%;
   }

@@ -540,6 +540,9 @@ header .global_btn span {
 }
 
 /* 리뷰 */
+.swiperMobile{
+  display: none;
+}
 .container .review {
   padding: 90px 0;
   background-color: #f5f5f5;
@@ -573,6 +576,11 @@ header .global_btn span {
 .container .review .review_box .review_cont {
   padding: 1rem 2.5rem 2.5rem;
 }
+.swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after,
+.swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after{
+  color:#797979
+}
+
 /* 문의 */
 .container .contact {
   background: #31353d;
@@ -589,7 +597,6 @@ header .global_btn span {
 }
 .container .contact .wrap > * {
   width: 50%;
-  min-height: 400px;
 }
 .container .contact .form {
   padding: 4rem 0;
@@ -617,6 +624,7 @@ header .global_btn span {
 .container .contact .map {
   width: 45%;
   position: relative;
+  height: 80vh;
 }
 .container .contact .map::after {
   content: "찾아오시는 길";
@@ -627,6 +635,7 @@ header .global_btn span {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 4rem 2rem;
   z-index: 999;
+  top:0;
 }
 .container .contact .map p {
   color: #fff;
@@ -1125,6 +1134,13 @@ footer .call a {
     margin-left: 1rem;
     margin-right: 1rem;
   }
+  .swiperPC{
+    display: none;;
+  }
+  .layout_flex_center.service_wrap{
+    flex-wrap: wrap;
+  }
+
   .container .contact .wrap {
     flex-wrap: wrap;
     flex-direction: column;

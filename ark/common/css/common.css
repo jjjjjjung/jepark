@@ -553,6 +553,9 @@ header .global_btn span {
 
 /* 리뷰 */
 .swiperMobile {
+  display: none;
+}
+.swiperPC {
   display: block;
 }
 .container .review {
@@ -1205,6 +1208,9 @@ footer .call a {
   }
   .swiperPC {
     display: none;
+  }
+  .swiperMobile {
+    display: block;
   }
   .layout_flex_center.service_wrap {
     flex-wrap: wrap;

@@ -173,7 +173,7 @@ sub{
 	border-top: 1px solid #eee;
 	border-bottom: 1px solid #eee;
 	margin: 1rem 0;
-	min-height: 360px;
+	min-height: 560px;
 	font-size: 1rem;;
 }
 
@@ -187,14 +187,16 @@ sub{
 	border:0;
 	background-repeat: no-repeat;
 	background-size: 6px;
-	background-image: url('../images/ico-arrow.svg');
+	
 	color:#797979
 }
 .board-footer button.prev{
+	background-image: url('../images/ico-arrow-l.svg');
 	background-position: left center;
 	padding-left:10px;
 }
 .board-footer button.next{
+	background-image: url('../images/ico-arrow-r.svg');
 	background-position: right center ;
 	padding-right:10px;
 }

@@ -1,15 +1,142 @@
-@media screen and (min-width: 1024px)  {
-    body{
-        color:#212121;
-        font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-    }
-    a{
-        text-decoration: none;
-        color:#212121;
-    }
-    h1, h2, h3{
-        font-weight: 700;
-    }
+body {
+    color: #212121;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    position: relative
 }
+
+a {
+    text-decoration: none;
+    color: #212121;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+}
+
+.position-relative {
+    position: relative
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 16px 100px 16px 80px;
+    background-color: transparent;
+    z-index: 999;
+}
+
+.mv {
+    background: url('../images/img-keyvisual-bg.png') no-repeat center top;
+    background-size: 100%;
+    height: calc(100vh - 153px);
+    width: 100%;
+    padding: 153px 0 0;
+    position: relative;
+}
+
+.wrap {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 30px
+}
+
+.mv_cont {
+    width: 100%;
+    height: calc(100vh - 153px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mv_cont .cont_txt {
+    width: 45%;
+    color: #fff;
+    vertical-align: middle;
+
+}
+
+.mv_cont .cont_txt h3 {
+    font-size: 60px;
+    line-height: 1.3;
+}
+
+.mv_cont .cont_txt p {
+    margin-top: 20px;
+    line-height: 2;
+    font-size: 24px;
+}
+
+.mv_cont .cont_txt .app_btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 40px;
+}
+
+.mv_cont .cont_txt .app_btn a {
+    background-color: #000;
+    border-radius: 10px;
+    padding: 21px 35px;
+    color: #fff;
+    font-size: 21px;
+
+}
+
+.mv_cont .cont_txt .app_btn a:first-child {
+    margin-right: 10px
+}
+
+.mv_cont .cont_txt .app_btn a img {
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+    width: 28px;
+    height: 28px;
+}
+
+.mv_cont .cont_img {
+    width: 55%;
+    background: url('../images/img-keyvisual-phone.png') no-repeat right top;
+    background-size: 100%;
+    height: 100%;
+}
+
+.icon-scroll {
+    text-align: center;
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 1rem;
+    transform: translateZ(-50%);
+}
+
+section.service {
+    margin-top: 250px;
+}
+
+section.service li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+section.service li img {
+    width: 340px;
+    display: block;
+}
+
+section.service .content_txt .cont_ttl {}
+
+section.service .content_txt .sub_ttl {}
+
+section.service .content_txt sub {}
+
+@media screen and (min-width: 1024px) {}
+
 @media screen and (min-width: 768px) {}
+
 @media screen and (min-width: 360px) {}
